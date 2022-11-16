@@ -41,7 +41,7 @@ class Game {
     fuels = new Group();
     powerCoins = new Group();
     obstacle1 = new Group();
-    //Crie grupo 2 de obstáculos
+    //Crie grupo obstacle2
 
 
     var obstacle1Positions = [
@@ -54,6 +54,17 @@ class Game {
     ];
 
     //Crie novas posições para obstáculos
+    var obstacle2Positions = [
+      { x: , y: , image: obstacle2Image },
+      { x: , y: , image: obstacle2Image },
+      { x: , y: , image: obstacle2Image },
+     
+      { x: , y: , image: obstacle2Image },
+      { x: , y: , image: obstacle2Image },
+      { x: , y: , image: obstacle2Image },
+      { x: , y: , image: obstacle2Image }
+    ];
+
 
     // Adicione o sprite de combustível ao jogo
     this.addSprites(fuels, 4, fuelImage, 0.02);
