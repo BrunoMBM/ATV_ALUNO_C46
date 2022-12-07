@@ -42,7 +42,7 @@ class Game {
     powerCoins = new Group();
     obstacle1 = new Group();
     //Crie grupo obstacle2
-
+    obstacle2 = new Group();
 
     var obstacle1Positions = [
     { x: width / 2 - 150, y: height - 1300, image: obstacle1Image },
@@ -55,14 +55,14 @@ class Game {
 
     //Crie novas posições para obstáculos
     var obstacle2Positions = [
-      { x: , y: , image: obstacle2Image },
-      { x: , y: , image: obstacle2Image },
-      { x: , y: , image: obstacle2Image },
+      { x: width/2+250, y: height-800, image: obstacle2Image },
+      { x: width/2-180, y: height-2300, image: obstacle2Image },
+      { x: width/2, y: height-2800, image: obstacle2Image },
      
-      { x: , y: , image: obstacle2Image },
-      { x: , y: , image: obstacle2Image },
-      { x: , y: , image: obstacle2Image },
-      { x: , y: , image: obstacle2Image }
+      { x: width/2+180, y: height-3300, image: obstacle2Image },
+      { x: width/2+250, y: height-3800, image: obstacle2Image },
+      { x: width/2+250, y: height-4800, image: obstacle2Image },
+      { x: width/2-180, y: height-5500, image: obstacle2Image }
     ];
 
 
@@ -82,7 +82,14 @@ class Game {
     );
 
     //Chamar addsprites para 2 grupo de obstáculos
+    this.addSprites(
+      obstacle2,
+      obstacle2Positions.length,
+      obstacle2Image,
+      0.04,
+      obstacle2Positions
 
+    )
   }
 
   // C38 TA
@@ -214,7 +221,7 @@ class Game {
     });
 
     if (player.fuel > 0 && this.playerMoving) {
-      player.fuel -= 0 .3;
+      player.fuel -= 0.3;
     }
 
     if (player.fuel <= 0) {
